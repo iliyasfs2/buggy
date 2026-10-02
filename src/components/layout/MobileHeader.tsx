@@ -19,10 +19,10 @@ export function MobileHeader({ className = "" }: MobileHeaderProps): ReactElemen
   return (
     <header
       role="banner"
-      className={`flex md:hidden sticky top-0 z-30 h-14 w-full items-center justify-between px-4 bg-slate-900 border-b-2 border-slate-700/80 select-none ${className}`}
+      className={`flex md:hidden sticky top-0 z-30 h-14 w-full items-center justify-between px-4 bg-[#101826] border-b-2 border-[#24324a] select-none ${className}`}
     >
       <div className="flex items-center">
-        <BuggyLogo className="h-7 w-auto object-contain" />
+        <BuggyLogo className="h-9 w-auto object-contain" />
       </div>
 
       <div className="flex items-center gap-2">
@@ -32,3 +32,4 @@ export function MobileHeader({ className = "" }: MobileHeaderProps): ReactElemen
     </header>
   );
 }
+

@@ -5,10 +5,12 @@ export default function HomePage(): ReactElement {
   return (
     <AppShell>
       <div className="p-6">
-        <h1 className="text-2xl font-bold tracking-tight text-[#f8fafc]">
+        <h1 className="text-2xl font-bold tracking-tight text-slate-100">
           Buggy Workspace
         </h1>
       </div>
     </AppShell>
   );
 }
+
+

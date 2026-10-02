@@ -14,9 +14,12 @@ export interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps): ReactElement {
   return (
     <html lang="en" className="dark">
-      <body className="bg-slate-900 text-slate-100 antialiased">
+      <body className="bg-[#101826] text-slate-100 antialiased">
         {children}
       </body>
     </html>
   );
 }
+
+
+

@@ -12,13 +12,16 @@ export interface AppShellProps {
 
 export function AppShell({ children, className = "" }: AppShellProps): ReactElement {
   return (
-    <div className={`min-h-screen bg-slate-900 text-slate-100 flex flex-col ${className}`}>
+    <div className={`min-h-screen bg-[#101826] text-slate-100 flex flex-col ${className}`}>
       <DesktopSidebar />
       <MobileHeader />
-      <main className="flex-1 md:pl-64 min-h-screen pb-16 md:pb-0">
+      <main className="flex-1 md:pl-64 min-h-screen pb-16 md:pb-0 bg-[#101826]">
         {children}
       </main>
       <MobileBottomNav />
     </div>
   );
 }
+
+
+

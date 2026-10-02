@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactElement } from "react";
-import { Flame, Coins } from "lucide-react";
+import Image from "next/image";
 
 export type StatBadgeVariant = "streak" | "byte";
 
@@ -22,18 +22,21 @@ export function StatBadge({
   const label = isStreak ? `Streak: ${value} days` : `Balance: ${value.toLocaleString()} bytes`;
   const formattedValue = isStreak ? value.toString() : value.toLocaleString();
 
-  const basePadding = compact ? "px-2 py-1" : "px-2.5 py-1";
+  const iconSrc = isStreak ? "/icons/streak.png" : "/icons/byte.png";
+  const iconAlt = isStreak ? "Streak icon" : "Byte icon";
 
   return (
     <div
       aria-label={label}
-      className={`inline-flex items-center gap-1.5 rounded-full select-none bg-slate-800/80 border border-slate-700/60 ${basePadding} ${className}`}
+      className={`inline-flex items-center gap-1.5 select-none bg-transparent ${className}`}
     >
-      {isStreak ? (
-        <Flame className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-      ) : (
-        <Coins className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-      )}
+      <Image
+        src={iconSrc}
+        alt={iconAlt}
+        width={18}
+        height={18}
+        className="w-[24px] h-[24px] object-contain shrink-0 bg-transparent"
+      />
       <span className="text-xs font-semibold text-slate-100">{formattedValue}</span>
     </div>
   );

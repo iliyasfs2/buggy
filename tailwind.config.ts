@@ -8,9 +8,9 @@ const config: Config = {
     extend: {
       colors: {
         buggy: {
-          base: "#0f172a",
-          surface: "#0f172a",
-          border: "rgba(51, 65, 85, 0.6)",
+          base: "#101826",
+          surface: "#101826",
+          border: "#24324a",
           inactive: "#94a3b8",
           blue: "#3b82f6",
           blueLight: "#60a5fa",
@@ -23,3 +23,6 @@ const config: Config = {
 };
 
 export default config;
+
+
+
