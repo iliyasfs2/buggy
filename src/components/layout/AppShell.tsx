@@ -6,11 +6,11 @@ import { MobileHeader } from "./MobileHeader";
 import { MobileBottomNav } from "./MobileBottomNav";
 
 export interface AppShellProps {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
 }
 
-export function AppShell({ children, className = "" }: AppShellProps): ReactElement {
+export function AppShell({ children = null, className = "" }: AppShellProps): ReactElement {
   return (
     <div className={`min-h-screen bg-[#101826] text-slate-100 flex flex-col ${className}`}>
       <DesktopSidebar />

@@ -24,6 +24,8 @@ export function StatBadge({
 
   const iconSrc = isStreak ? "/icons/streak.png" : "/icons/byte.png";
   const iconAlt = isStreak ? "Streak icon" : "Byte icon";
+  const valueColor = isStreak ? "text-yellow-400" : "text-sky-400";
+  const textSize = compact ? "text-sm font-bold" : "text-base font-bold";
 
   return (
     <div
@@ -33,11 +35,12 @@ export function StatBadge({
       <Image
         src={iconSrc}
         alt={iconAlt}
-        width={18}
-        height={18}
-        className="w-[24px] h-[24px] object-contain shrink-0 bg-transparent"
+        width={22}
+        height={22}
+        className="w-[22px] h-[22px] object-contain shrink-0 bg-transparent"
       />
-      <span className="text-xs font-semibold text-slate-100">{formattedValue}</span>
+      <span className={`${textSize} ${valueColor}`}>{formattedValue}</span>
     </div>
   );
 }
+

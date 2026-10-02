@@ -15,7 +15,7 @@ export const useNavStore = create<NavState>((set) => ({
   activeTab: "setup",
   streakCount: 14,
   byteBalance: 1250,
-  currentTrack: "JS & React",
+  currentTrack: "JS",
   setActiveTab: (tab: TabId) => set({ activeTab: tab }),
   setTrack: (track: string) => set({ currentTrack: track })
 }));
